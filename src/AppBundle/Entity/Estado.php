@@ -14,8 +14,9 @@ class Estado
      * @var int
      * @ORM\Column(type="integer")
      * @ORM\Id
+     * @ORM\GeneratedValue()
      */
-    private $idEstado;
+    private $id;
 
     /**
      * @var string
@@ -25,7 +26,7 @@ class Estado
 
     /**
      * @var Material[]
-     * @ORM\OneToMany(targetEntity="Material", mappedBy="materiales")
+     * @ORM\OneToMany(targetEntity="Material", mappedBy="estado")
      */
     private $materiales;
 
